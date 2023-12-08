@@ -11,6 +11,8 @@ services:
       - ./otel-collector.yaml:/etc/otel-collector.yaml
     networks:
       - tempo-network
+    ports:
+      - '4317:4317'
 
     # To eventually offload to Tempo...
   tempo:
